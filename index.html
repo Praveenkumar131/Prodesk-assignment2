@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary Web App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&family=Source+Code+Pro&family=Open+Sans&family=Lato&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="controls">
+        <div class="font-theme-controls">
+          <label for="fontSelector">Font:</label>
+          <select id="fontSelector">
+            <option value="serif">Serif (Merriweather)</option>
+            <option value="sans-serif">Sans-serif (Open Sans)</option>
+            <option value="monospace">Monospace (Source Code Pro)</option>
+            <option value="roboto">Roboto</option>
+            <option value="lato">Lato</option>
+          </select>
+
+          <label for="colorTheme">Theme:</label>
+          <select id="colorTheme">
+            <option value="default">Default</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+          </select>
+        </div>
+
+        <div class="toggle-group">
+          <label class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+          </label>
+          <button id="moonBtn" title="Toggle Theme">☽</button>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for a word...">
+        <button onclick="searchWord()">🔍</button>
+      </div>
+    </header>
+
+    <main id="definitionContainer">
+      <!-- Word data will be populated here -->
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
